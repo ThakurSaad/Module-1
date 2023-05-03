@@ -36,6 +36,7 @@ type GenericTuple<X, Y> = [X, Y];
 const relation: GenericTuple<string, string> = ["Thakur", "Kate Winslet"];
 
 type RelationWithSalaryType = { name: string; salary: number };
+
 interface IRelationWithSalaryType {
   name: string;
   salary: number;
