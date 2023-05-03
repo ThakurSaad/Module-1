@@ -4,16 +4,19 @@ interface CrushInterface<T, U = null> {
   kids?: U;
 }
 
+// ------------------------
 const crush01: CrushInterface<number, undefined | null> = {
   name: "lalalalisa",
   husband: 0,
 };
 
+// ------------------------
 const crush02: CrushInterface<boolean> = {
   name: "lalalalisa",
   husband: false,
 };
 
+// ------------------------
 interface IHusband {
   name: string;
   salary: number;
@@ -28,10 +31,13 @@ const crush03: CrushInterface<IHusband, number> = {
   kids: 3,
 };
 
-const crush04: CrushInterface<
-  { name: string; age: number },
-  { name: string; age: number }
-> = {
+// ------------------------
+interface PersonInterface {
+  name: string;
+  age: number;
+}
+
+const crush04: CrushInterface<PersonInterface, PersonInterface> = {
   name: "Jenny",
   husband: {
     name: "Thakur",
