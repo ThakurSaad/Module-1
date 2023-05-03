@@ -6,6 +6,12 @@ type MyInfoType = {
   other2: null;
 };
 
+interface IMandatory {
+  name: string;
+  age: number;
+  salary: number;
+}
+
 const myInfo1: MyInfoType = {
   name: "Saad",
   age: 22,
@@ -14,11 +20,7 @@ const myInfo1: MyInfoType = {
   other2: null,
 };
 
-const addMeToMyCrushMind1 = <
-  T extends { name: string; age: number; salary: number }
->(
-  myInfo: T
-) => {
+const addMeToMyCrushMind1 = <T extends IMandatory>(myInfo: T) => {
   const crush = "Kate Winslet";
   const newData = { ...myInfo, crush };
   return newData;
