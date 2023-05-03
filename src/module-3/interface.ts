@@ -60,7 +60,7 @@ const addNumbers: IAddNumbers = (n1, n2) => n1 + n2;
 type RollNumbersType = number[];
 
 interface IRollNumbers {
-  [index: number]: number;
+  [index: number]: number; // using index signature
 }
 
 // const rollNumbers: RollNumbersType = [1, 2, 3, 4];
