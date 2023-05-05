@@ -1,6 +1,6 @@
 class BankAccount {
-  id: string;
-  name: string;
+  public readonly id: string;
+  public name: string;
   private _balance: number;
   // protected _balance: number;
 
@@ -32,4 +32,5 @@ class StudentAccount extends BankAccount {
 
 const myAccount = new BankAccount("12ad2c", "thakur", 20);
 
-console.log(myAccount.addDeposit(20));
+myAccount.addDeposit(20);
+myAccount.getBalance();
