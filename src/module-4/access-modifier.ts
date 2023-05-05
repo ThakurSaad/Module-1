@@ -11,10 +11,10 @@ class BankAccount {
   }
 
   getBalance() {
-    return `Current balance is ${this._balance}`;
+    console.log(`Current balance is ${this._balance}`);
   }
   addDeposit(amount: number) {
-    return (this._balance += amount);
+    console.log((this._balance += amount));
   }
 }
 
