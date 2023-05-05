@@ -1,0 +1,35 @@
+class BankAccount {
+  id: string;
+  name: string;
+  private _balance: number;
+  // protected _balance: number;
+
+  constructor(id: string, name: string, balance: number) {
+    this.id = id;
+    this.name = name;
+    this._balance = balance;
+  }
+
+  getBalance() {
+    return `Current balance is ${this._balance}`;
+  }
+  addDeposit(amount: number) {
+    return (this._balance += amount);
+  }
+}
+
+class StudentAccount extends BankAccount {
+  test() {
+    /* 
+    this._balance= 20  
+    
+    // _balance is accessible from here when used `protected`
+    // because StudentAccount is sub-class of BankAccount
+    // _balance is not accessible if used `private`
+    */
+  }
+}
+
+const myAccount = new BankAccount("12ad2c", "thakur", 20);
+
+console.log(myAccount.addDeposit(20));
