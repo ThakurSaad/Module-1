@@ -87,6 +87,7 @@ getAnimal(animal2);
 
 /* 
 // another alternative of getAnimal()
+// checking instanceof by function
 
 function isDog(animal: Animal01): animal is Dog {
   return animal instanceof Dog;
