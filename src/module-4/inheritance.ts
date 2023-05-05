@@ -17,7 +17,6 @@ class Person {
 }
 /*  
 // this also works like Student class
-// inheriting from parent class Person
 
 class Student1 extends Person {}
 */
