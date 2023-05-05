@@ -7,7 +7,6 @@ class Animal {
 
   constructor(name: string, species: string, sound: string) {
     // 2. initializing parameters
-
     // 3. assigning parameters to class properties
     // this.name is class property
     // name is the initialized parameter
