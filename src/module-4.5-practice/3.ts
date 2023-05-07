@@ -25,13 +25,25 @@ const productArr: IProduct[] = [
   { id: 8, name: "movie", price: 0, category: "entertainment" },
 ];
 
-const filterProduct = <T, U>(productArr: T, value: U) => {
-  const newArr = (productArr as IProduct[]).filter(
-    (product) => product.category === value
-  );
+const filterProduct = <T extends IProduct>(
+  productArr: T[],
+  criterion: keyof T,
+  value: T[keyof T]
+) => {
+  const newArr = productArr.filter((product) => product[criterion] === value);
   console.log(newArr);
   return newArr;
 };
 
-filterProduct<IProduct[], string>(productArr, "study");
-// How can I make the property dynamic? like I can send id, name, price etc dynamically.
+filterProduct(productArr, "category", "entertainment");
+
+/**
+ * T extends IProduct
+ * T === {  id: number; name: string; price: number; category: string;}
+ * 
+ * T[keyof T]
+ * When T = { id: 6, name: "comic", price: 0, category: "entertainment" }
+ * keyof T = "id" | "name" | "comic" | "price" | "category"
+ * for category, T [keyof T] = T ["category"]
+ * for id, T [keyof T] = T ["id"]
+ */
