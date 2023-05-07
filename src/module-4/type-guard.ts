@@ -1,4 +1,4 @@
-// keyof guard
+// of guard
 
 type Alphanumeric = string | number;
 
