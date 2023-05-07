@@ -1,8 +1,8 @@
-function getArrayItem<T, K extends keyof T>(
+function getArrayItem<T, K extends keyof T>( // what is the value of K here?
   arr: T[],
   index: number,
   key: K
-): T[K] {
+): T[K] { // what does T[K] mean?
   const item = arr[index];
 
   //   console.log(item, "\n", item[key]);
