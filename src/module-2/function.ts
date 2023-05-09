@@ -1,9 +1,9 @@
 // normal function // default parameter
-function add(n1: number, n2: number, n3: number = 10): number {
+function addNumber(n1: number, n2: number, n3: number = 10): number {
   return n1 + n2 + n3;
 }
 
-add(30, 20);
+addNumber(30, 20);
 
 // -------------
 // spread operator
