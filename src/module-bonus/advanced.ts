@@ -14,7 +14,7 @@ interface IMethods {
 
 type model = Model<IUser2, IMethods>;
 
-class User1 implements model {
+class UserClass implements model {
   data: IUser2;
   methods: IMethods;
 
@@ -26,5 +26,5 @@ class User1 implements model {
   }
 }
 
-const monaLisa = new User1("Mona", "Lisa");
-console.log(monaLisa.methods.fullName());
+const kimJennie = new UserClass("Kim", "Jennie");
+console.log(kimJennie.methods.fullName());
